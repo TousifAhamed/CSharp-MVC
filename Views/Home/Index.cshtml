@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@{ 
+    List<string> dt = new List<string>();
+    dt.Add("Python");
+    dt.Add("Java");
+    ViewBag.Items = dt;
+
+    Html.RenderPartial("ListpartialView");
+}
